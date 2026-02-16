@@ -464,10 +464,10 @@ class CopilotClient:
 
         # Add tool filtering options
         available_tools = cfg.get("available_tools")
-        if available_tools:
+        if available_tools is not None:
             payload["availableTools"] = available_tools
         excluded_tools = cfg.get("excluded_tools")
-        if excluded_tools:
+        if excluded_tools is not None:
             payload["excludedTools"] = excluded_tools
 
         # Enable permission request callback if handler provided
